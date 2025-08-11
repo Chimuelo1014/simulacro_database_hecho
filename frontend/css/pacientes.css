@@ -1,0 +1,116 @@
+/* Estructura general */
+main {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+/* Sidebar minimalista */
+.sidebar {
+    background-color: #ffffff;
+    color: #333;
+    padding: 25px 20px;
+    width: 260px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto;
+    border-right: 1px solid #e5e5e5;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.04);
+}
+
+.sidebar h4 {
+    font-weight: 600;
+    color: #5a4fcf;
+    margin-bottom: 15px;
+}
+
+/* Links del menú */
+.sidebar a {
+    color: #444;
+    text-decoration: none;
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.25s ease;
+}
+
+.sidebar a i {
+    margin-right: 10px;
+    font-size: 1.1rem;
+    color: #5a4fcf;
+    transition: transform 0.25s ease;
+}
+
+.sidebar a:hover {
+    background-color: #f0f0ff;
+    color: #5a4fcf;
+}
+
+.sidebar a:hover i {
+    transform: scale(1.1);
+}
+
+/* Link activo */
+.sidebar a.active {
+    background-color: #5a4fcf;
+    color: white;
+}
+
+.sidebar a.active i {
+    color: white;
+}
+
+/* Contenido */
+.content {
+    flex: 1;
+    padding: 25px;
+    overflow-x: auto;
+}
+
+/* Botón agregar */
+.botonAgreagardash {
+    background-color: #5a4fcf !important;
+    color: white;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* Imagen en tabla */
+.imagenEvento {
+    max-height: 40px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 15px;
+        border-bottom: 1px solid #e5e5e5;
+        box-shadow: none;
+    }
+
+    .sidebar a {
+        font-size: 0.9em;
+        padding: 10px 12px;
+    }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "simulacro_hecho",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "csv": "^6.4.1",
+    "csv-parser": "^3.2.0",
+    "express": "^5.1.0",
+    "fs": "^0.0.1-security",
+    "multer": "^2.0.2",
+    "mysql2": "^3.14.3"
+  }
+}
