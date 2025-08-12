@@ -34,6 +34,12 @@ function abrirModal() {
     document.getElementById("correo_paciente").value = "";
     modal.show();
 }
+//aqui llamamos la funcion guardar usuario para que sirva el tipo email 
+const pacienteGuardar = getElementById('formPaciente').addEventListener('submit', (e)=>{
+    e.preventDefault();
+    guardarPaciente();
+}
+);
 
 function editarPaciente(id) {
     fetch(`${API_URL}/${id}`)
@@ -46,6 +52,7 @@ function editarPaciente(id) {
             modal.show();
         });
 }
+
 
 function guardarPaciente() {
     const id = document.getElementById("id_paciente").value;

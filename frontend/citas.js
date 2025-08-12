@@ -32,6 +32,38 @@ async function cargarCitas() {
     }
 }
 
+
+const citaGuardar = getElementById('formCita').addEventListener('submit', (e)=>{
+    e.preventDefault();
+    guardarCita();
+}
+);
+
+function guardarCita() {
+    const id = document.getElementById("id_paciente").value;
+    const paciente = {
+        nombre_paciente: document.getElementById("nombre_paciente").value,
+        correo_paciente: document.getElementById("correo_paciente").value
+    };
+
+    const metodo = id ? "PUT" : "POST";
+    const url = id ? `${API_URL}/${id}` : API_URL;
+
+    fetch(url, {
+        method: metodo,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(paciente)
+    })
+    .then(res => res.json())
+    .then(() => {
+        modal.hide();
+        cargarPacientes();
+    });
+}
+
+
+
+
 async function eliminarCita(id) {
     if (confirm("¿Seguro que deseas eliminar esta cita?")) {
         try {

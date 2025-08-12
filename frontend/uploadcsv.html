@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>csv</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/pacientes.css">
 </head>
+
 <body>
-<main>
+    <main>
         <div class="sidebar">
             <h4 class="text-center">Events</h4>
 
@@ -23,22 +28,41 @@
         </div>
 
         <div class="content">
-            
-        
-            <table class="table">
-                <thead>
-                    <tr>
-                            
-                        <th scope="col">ID</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Correo</th>
-                        
-                    </tr>
-                </thead>
-            <tbody id="celda"></tbody>
+
+            <form id="formPacientes">
+                <div class="mb-3">
+                    <label class="form-label">Paciente CSV</label>
+                    <input type="file" class="form-control" id="filePacientes" name="archivo">
+                    <div class="form-text">Archivo CSV de pacientes</div>
+                </div>
+                <button type="submit" class="btn btn-primary">Subir Pacientes</button>
+            </form>
+
+            <form id="formMedicos" class="mt-4">
+                <div class="mb-3">
+                    <label class="form-label">Medico CSV</label>
+                    <input type="file" class="form-control" id="fileMedicos" name="archivo">
+                    <div class="form-text">Archivo CSV de médicos</div>
+                </div>
+                <button type="submit" class="btn btn-primary">Subir Médicos</button>
+            </form>
+
+            <form id="formCitas" class="mt-4">
+                <div class="mb-3">
+                    <label class="form-label">Cita CSV</label>
+                    <input type="file" class="form-control" id="fileCitas" name="archivo">
+                    <div class="form-text">Archivo CSV de citas</div>
+                </div>
+                <button type="submit" class="btn btn-primary">Subir Citas</button>
+            </form>
+
+
         </div>
     </main>
-    <script src="./pacientes.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
+    <script src="./upload.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
